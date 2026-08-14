@@ -13,17 +13,17 @@ class DivisiController extends Controller
         return view('divisi.index',compact('divisi'));
     }
 
-    function create() {
+    public function create() {
         return view('divisi.create');
     }
 
-    function store(Request $r) {
+    public function store(Request $r) {
         $r->validate([
-            'kode'=>'required|unique:divisi',
+            'kode'=>'required|unique:divisis',
             'nama'=>'required'
         ]);
         
-        Divisi::create($r->all());
+        divisi::create($r->all());
         return redirect()
             ->route('divisi.index')
             ->with('success','Tersimpan');

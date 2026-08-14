@@ -8,10 +8,13 @@
 </head>
 <body>
     <table class="table table-bordered">
-        <thead><tr>
-            <th>No</th><th>Kode</th>
-            <th>Nama Divisi</th>
-        </tr></thead>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Kode</th>
+                <th>Nama Divisi</th>
+            </tr>
+        </thead>
 
     <tbody>
         @foreach ($divisi as $d)
@@ -23,5 +26,9 @@
         @endforeach
     </tbody>
     </table>
+
+    <a href="{{ route('divisi.create') }}">
+        <button>Tambah Divisi</button>
+    </a>
 </body>
 </html>
