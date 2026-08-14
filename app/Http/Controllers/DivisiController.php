@@ -7,12 +7,14 @@ use Illuminate\Http\Request;
 
 class DivisiController extends Controller
 {
+    // READ
     public function index() {
         $divisi=Divisi::all();
 
         return view('divisi.index',compact('divisi'));
     }
 
+    // CREATE
     public function create() {
         return view('divisi.create');
     }
@@ -27,5 +29,16 @@ class DivisiController extends Controller
         return redirect()
             ->route('divisi.index')
             ->with('success','Tersimpan');
+    }
+
+    // UPDATE
+    public function edit(Divisi $divisi) {
+        return view('divisi.edit', compact('divisi'));
+    }
+
+    public function update(Request $r, Divisi $divisi) {
+        $r->validate(['...']);
+        $divisi->update($r->all());
+        return redirect()->route('divisi.index');
     }
 }

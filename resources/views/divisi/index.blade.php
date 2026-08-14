@@ -22,6 +22,11 @@
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $d->kode }}</td>
                 <td>{{ $d->nama }}</td>
+                <td>
+                    <a href="{{ route('divisi.edit', $d->id) }}">
+                        <button>Edit</button>
+                    </a>
+                </td>
             </tr>
         @endforeach
     </tbody>
@@ -30,5 +35,6 @@
     <a href="{{ route('divisi.create') }}">
         <button>Tambah Divisi</button>
     </a>
+
 </body>
 </html>
