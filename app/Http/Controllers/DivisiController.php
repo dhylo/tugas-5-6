@@ -41,4 +41,12 @@ class DivisiController extends Controller
         $divisi->update($r->all());
         return redirect()->route('divisi.index');
     }
+
+    // DELETE
+    public function destroy(Divisi $divisi) {
+        $divisi->delete();
+        return redirect()
+            ->route('divisi.index')
+            ->with('success', 'Terhapus');
+    }
 }

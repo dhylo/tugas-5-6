@@ -27,6 +27,15 @@
                         <button>Edit</button>
                     </a>
                 </td>
+                <td>
+                    <form action="{{ route('divisi.destroy', $d->id) }}" method="POST" class="d-inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus data ini?')">
+                            Hapus
+                        </button>
+                    </form>
+                </td>
             </tr>
         @endforeach
     </tbody>
