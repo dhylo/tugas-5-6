@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hallo</h1>
+    <h1>TIDAK ADA UI, SILAHKAN
+        <a href="{{ route('login') }}"> LOGIN</a>
+    </h1>
 </body>
 </html>

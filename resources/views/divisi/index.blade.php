@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sistem Kepegawaian</title>
+    <title>Divisi - Sistem Kepegawaian</title>
     @vite('resources/css/app.css')
 </head>
 <body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen">
@@ -14,14 +14,15 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-3">
                     <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">HI</span>
+                        <span class="text-white font-bold text-lg">SK</span>
                     </div>
                     <h1 class="text-2xl font-bold text-gray-900">Selamat Datang, {{ auth()->user()->name }}</h1>
                 </div>
                 <form action="{{ route('logout') }}" method="POST" class="inline">
                     @csrf
-                    <button type="submit" class="btn btn-outline-red">
-                        <i class="fas fa-sign-out-alt"></i> Logout
+                    <button type="submit" class="inline-flex items-center gap-2 rounded-lg border border-red-500 px-4 py-2 text-sm font-semibold text-red-600 transition hover:bg-red-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-red-200">
+                        <span aria-hidden="true">↪</span>
+                        <span>Logout</span>
                     </button>
                 </form>
             </div>
