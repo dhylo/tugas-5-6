@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Data Pegawai</h1>
-    
+    <a href="{{ route('pegawai.create') }}">Tambah Pegawai</a>
     <table>
         {{-- baris header --}}
         <tr>
